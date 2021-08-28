@@ -82,10 +82,7 @@ switch (true) {
   case (pets > friendsPets):
     (mostPets = pets);
     break;
-  case (pets === friendsPets):
-    (mostPets = pets);
-    break;
-  default: mostPets = 'try the code again buddy'
+  default: mostPets = pets
 }
 console.log(mostPets);
 
