@@ -5,11 +5,11 @@ let firstName = 'Jack';
 let lastName = 'Barrett';
 // 3 - Create a third variable called `fullName`, assign it the value of your first and last name
 // (remember, you already have variables for this, can you use those?)
-let fullName = 'Jack Barrett';
+let fullName = firstName + ' ' + lastName;
 // 4 - Console log the value of `fullName`
 console.log(fullName);
 // 5 - Create a variable called `luckyNumber` and assign it the value of your lucky number.
-let luckyNumber = 27;
+let luckyNumber = 25;
 // 6 - Console log this sentence, adding in the variables you created above:
 // 'My name is (full name), and I think (lucky number) is a winner!'.
 // Refer back to the videos if you need help with this one.
@@ -62,16 +62,33 @@ else if (pets > allowedPets) {
 // console.log `mostPets` after the conditional has run.
 let mostPets = 0;
 
-if (friendsPets > pets) {
+if (friendsPets >= pets) {
   (mostPets += friendsPets);
 }
-else if (pets > friendsPets) {
+  else {
   (mostPets += pets);
 }
-else if (pets === friendsPets) {
-  (mostPets += pets);
-}
+
 console.log(mostPets);
+
+
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
 
+
+switch (true) {
+  case (pets < friendsPets):
+    (mostPets = friendsPets);
+    break;
+  case (pets > friendsPets):
+    (mostPets = pets);
+    break;
+  case (pets === friendsPets):
+    (mostPets = pets);
+    break;
+  default: mostPets = 'try the code again buddy'
+}
+console.log(mostPets);
+
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+mostPets = (pets >= mostPets) ? pets:friendsPets;
+console.log(mostPets);
